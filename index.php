@@ -1,7 +1,18 @@
 <?php
 session_start();
 
-// echo "php is working...";
+if(isset($_POST['submit']))
+{
+  // Test that the POST is going through
+  // var_dump($_POST);
+
+  $_SESSION['cart'][] = $_POST['cartItem'];
+
+}
+elseif(isset($_POST['clearCart']))
+{
+  $_SESSION['cart'] = array();
+}
 
 
 ?>
@@ -22,16 +33,33 @@ session_start();
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <form action="" name="cartForm">
-          <label for="cartForm">
-            
-          </label>
-
+      <div class="col-md-5">
+        <form action="" name="cartForm" method="POST">
+          <div class="form-group"
+            <label for="cartForm">
+              Enter an Item:
+            </label>
+            <input type="text" name="cartItem" id="cartItem" class="form-control">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit" name="submit">
+              Submit
+            </button>
+            <button class="btn btn-info" type="submit" name="clearCart">
+              Clear Cart
+            </button>
+          </div>
         </form>
       </div>
       <div>
-        column 2
+        <p>Current Items in Cart:</p>
+        <?php
+          foreach($_SESSION['cart'] as $item){
+        ?>
+          <ul>
+              <li><?= $item ?></li>
+          </ul>
+        <?php } ?>
       </div>
     </div>
   </div>
