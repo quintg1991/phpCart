@@ -46,8 +46,8 @@ elseif(isset($_POST['clearCart']))
     <div class="row">
       <div class="col-md-5">
         <form action="" name="cartForm" method="POST">
-          <div class="form-group"
-            <label for="cartForm">
+          <div class="form-group">
+            <label for="fartForm">
               Enter an Item:
             </label>
             <input type="text" name="cartItem" id="cartItem" class="form-control">
