@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-echo "php is working...";
+// echo "php is working...";
 
 
 ?>
@@ -23,7 +23,12 @@ echo "php is working...";
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        column 1
+        <form action="" name="cartForm">
+          <label for="cartForm">
+            
+          </label>
+
+        </form>
       </div>
       <div>
         column 2
