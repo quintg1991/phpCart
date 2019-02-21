@@ -1,6 +1,15 @@
+<!--                                                                      --/>
+Description: A program to take user input and add it to a session array
+
+Author: Franklin Glover
+Date: 02/21/2019
+Version: 1.0 
+<\--                                                                       -->
+
 <?php
 session_start();
 
+// If user clicked Submit
 if(isset($_POST['submit']))
 {
   // Test that the POST is going through
@@ -9,6 +18,7 @@ if(isset($_POST['submit']))
   $_SESSION['cart'][] = $_POST['cartItem'];
 
 }
+// If user wanted to clear the cart
 elseif(isset($_POST['clearCart']))
 {
   $_SESSION['cart'] = array();
@@ -22,7 +32,8 @@ elseif(isset($_POST['clearCart']))
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>PHP Cart</title>
+  <!-- Include Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
