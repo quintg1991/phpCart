@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
   $_SESSION['cart'][] = $_POST['cartItem'];
 
   // Dump the contents of the cart
-  var_dump($_SESSION['cart']);
+  // var_dump($_SESSION['cart']);
 
 }
 // If user wanted to clear the cart
